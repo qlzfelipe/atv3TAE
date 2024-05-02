@@ -62,7 +62,7 @@ for(i in 1:length(k_grid)){
   })
   #stopCluster(cluster)
   print(i)
-  mcc_simple_holdout[i] <- Metrics::accuracy(labs, fitted(model))
+  mcc_vec_loocv[i] <- Metrics::accuracy(labs, fitted(model))
 }
 #Validação holdout simples
 mcc_simple_holdout <- numeric(length(k_grid))
